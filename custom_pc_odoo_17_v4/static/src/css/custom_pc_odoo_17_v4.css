@@ -1,0 +1,51 @@
+/* custom_pc_odoo_17_v4.css */
+
+.custom_pc_odoo_17_v4 {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.custom_pc_odoo_17_v4 .pc-component {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.custom_pc_odoo_17_v4 .pc-component .component-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.custom_pc_odoo_17_v4 .pc-component .component-details {
+    font-size: 0.9em;
+}
+
+.custom_pc_odoo_17_v4 .pc-build {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.custom_pc_odoo_17_v4 .pc-build .build-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.custom_pc_odoo_17_v4 .pc-build .build-details {
+    font-size: 0.9em;
+}
+
+.custom_pc_odoo_17_v4 .customer-profile {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.custom_pc_odoo_17_v4 .customer-profile .customer-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.custom_pc_odoo_17_v4 .customer-profile .customer-details {
+    font-size: 0.9em;
+}

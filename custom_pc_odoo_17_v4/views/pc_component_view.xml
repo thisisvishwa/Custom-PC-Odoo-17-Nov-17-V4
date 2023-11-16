@@ -1,0 +1,56 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Tree view for pc_component -->
+        <record id="pc_component_tree_view" model="ir.ui.view">
+            <field name="name">pc.component.tree.view</field>
+            <field name="model">pc.component</field>
+            <field name="arch" type="xml">
+                <tree string="PC Component">
+                    <field name="name"/>
+                    <field name="specifications"/>
+                    <field name="price"/>
+                    <field name="compatibility"/>
+                    <field name="supplier_info"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form view for pc_component -->
+        <record id="pc_component_form_view" model="ir.ui.view">
+            <field name="name">pc.component.form.view</field>
+            <field name="model">pc.component</field>
+            <field name="arch" type="xml">
+                <form string="PC Component">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="specifications"/>
+                            <field name="price"/>
+                            <field name="compatibility"/>
+                            <field name="supplier_info"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action to open pc_component -->
+        <record id="action_pc_component" model="ir.actions.act_window">
+            <field name="name">PC Components</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pc.component</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new PC Component
+                </p>
+            </field>
+        </record>
+
+        <!-- Menu item for pc_component -->
+        <menuitem id="menu_pc_component" name="PC Components" parent="base.menu_custom" sequence="10" action="action_pc_component"/>
+    </data>
+</odoo>
+```

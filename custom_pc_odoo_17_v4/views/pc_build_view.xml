@@ -1,0 +1,65 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- PC Build Form View -->
+        <record id="pc_build_form_view" model="ir.ui.view">
+            <field name="name">pc.build.form</field>
+            <field name="model">pc_build</field>
+            <field name="arch" type="xml">
+                <form string="PC Build">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="customer_id"/>
+                            <field name="component_ids" widget="many2many_tags"/>
+                            <field name="total_price"/>
+                        </group>
+                        <notebook>
+                            <page string="Components">
+                                <field name="component_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="price"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- PC Build Tree View -->
+        <record id="pc_build_tree_view" model="ir.ui.view">
+            <field name="name">pc.build.tree</field>
+            <field name="model">pc_build</field>
+            <field name="arch" type="xml">
+                <tree string="PC Builds">
+                    <field name="name"/>
+                    <field name="customer_id"/>
+                    <field name="total_price"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- PC Build Action -->
+        <record id="action_pc_build" model="ir.actions.act_window">
+            <field name="name">PC Builds</field>
+            <field name="res_model">pc_build</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new PC Build
+                </p>
+                <p>
+                    Click to start designing your custom PC.
+                </p>
+            </field>
+        </record>
+
+        <!-- PC Build Menu -->
+        <menuitem id="menu_pc_build" name="PC Builds" parent="custom_pc_odoo_17_v4.menu_custom_pc" sequence="10" action="action_pc_build"/>
+    </data>
+</odoo>
+```
